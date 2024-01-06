@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BestCompare | thank you</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="/css/styles.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="wrapper">
+				<!-- This is topBar navigation  -->
+				<nav class="topBar">
+					<img src="./img/bc-logo.svg" alt="logoBestcompare" class="logo" />
+
+					<a href="callto:01258446624" class="emailLink desktop"
+						>Call us on 01258 446 624</a
+					>
+					<a href="callto:01258446624" class="emailLink mobile">
+						<img src="img/phone.svg" alt="" />
+						Call us
+					</a>
+				</nav>
+			</div>
+
+			<div id="progress-bar-container">
+				<div id="progress-bar"></div>
+			</div>
+
+			<!-- This is main content Form -->
+			<main class="main wrapper">
+				<!-- Thank You Step -->
+				<div class="thanks" id="thankYouStep">
+					<img src="./img/greatThanks.svg" alt="thank you" />
+					<h2 id="thankYouMessage"></h2>
+					<p class="subheading bold">
+						Be sure to monitor your phone and email for your personalised life
+						insurance quotes.
+					</p>
+				</div>
+			</main>
+
+			<!-- Extra information and footer below -->
+
+			<div class="links">
+				<div class="wrapper">
+					<a class="link" href="https://www.bbc.com/news/health-56752599"
+						>*bbc.com/news/health-56752599</a
+					>
+					<a
+						href="https://www.health.org.uk/publications/long-reads/nhs-performance-and-waiting-times"
+						>**health.org.uk/publications/long-reads/nhs-performance-and-waiting-times</a
+					>
+					<p>
+						∫ This is based off a non-smoking 25-year-old, with mid-level cover
+						paying a £200 excess living outside of London with £500 outpatient
+						cover
+					</p>
+				</div>
+			</div>
+			<footer class="footer">
+				<section class="mainFooter">
+					<div class="wrapper grid">
+						<div class="firstCol">
+							<img src="./img/bc-logo.svg-white.svg" alt="logoBestcompare" />
+
+							<div class="firstColInfo">
+								<a href="callto:01258 446 624">T: 01258 446 624</a>
+								<a href="mailto:hello@bestcompare">E: hello@bestcompare.com</a>
+							</div>
+
+							<div class="firstColText">
+								<p>
+									Please note: BestCompare are specialist lead generators who
+									will earn a fee by introducing you to an authorised FCA
+									regulated broker or insurer who can send you relevant quotes.
+									We are not an independent price comparison site, or an
+									insurance Brokerage. We do not offer financial advice.
+								</p>
+								<p>
+									BestCompare is a trading name of Amesmo Ltd. Amesmo Ltd is
+									registered in England and Wales, Company Registration No
+									11520871. Registered Office: 20-22 Wenlock Road London N1 7GU.
+									Head Office: The Waterfront, Salts Mill Road, Shipley, BD17
+									7TD.
+								</p>
+							</div>
+						</div>
+						<div class="secondCol col">
+							<p>Learn more</p>
+							<ul>
+								<li><a href="#">Life Insurance</a></li>
+								<li><a href="#">Health insurance</a></li>
+								<li><a href="#">Income Protection</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+						<div class="third col">
+							<p>Legal</p>
+							<ul>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="secondFooter">
+					<div class="wrapper">
+						<div class="copyrights">
+							<p>
+								Amesmo Ltd is Authorised and Regulated by the Financial Conduct
+								Authority and is entered on the Financial Services Register
+								under number 820864. Registered with the Information
+								Commissioners Office (Registration number ZA455421).
+							</p>
+							<p>©2023 BestCompare. All Rights Reserved.</p>
+						</div>
+					</div>
+				</section>
+			</footer>
+		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				// Retrieve the user's first name from Local Storage
+				const fullName = localStorage.getItem("fullName");
+
+				// Update the thank you message
+				const thankYouMessage = document.getElementById("thankYouMessage");
+				if (thankYouMessage) {
+					thankYouMessage.innerHTML = `It was great assisting you today <strong>${fullName}</strong>. Our partners are now analyzing your details and matching you with some affordable life insurance options.`;
+				}
+			});
+		</script>
+	</body>
+</html>

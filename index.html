@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BestCompare | life insurance</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="/css/styles.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="wrapper">
+				<!-- This is topBar navigation  -->
+				<nav class="topBar">
+					<img src="./img/bc-logo.svg" alt="logoBestcompare" class="logo" />
+
+					<a href="callto:01258446624" class="emailLink desktop"
+						>Call us on 01258 446 624</a
+					>
+					<a href="callto:01258446624" class="emailLink mobile">
+						<img src="img/phone.svg" alt="" />
+						Call us
+					</a>
+				</nav>
+			</div>
+
+			<div id="progress-bar-container">
+				<div id="progress-bar"></div>
+			</div>
+
+			<!-- This is main content Form -->
+			<main class="main wrapper">
+				<form id="insurance-form" class="form">
+					<h1>Compare Health Insurance Quotes</h1>
+
+					<!-- Section 1 Insurance for -->
+					<div class="section" id="section1">
+						<h2>Are you looking for health insurance just for you?</h2>
+						<div class="options">
+							<label
+								><input
+									type="radio"
+									name="insuranceFor"
+									value="myself"
+									required
+								/>
+
+								<img src="/img/myself.svg" alt="" />
+								<p>Myself</p>
+							</label>
+							<label
+								><input
+									type="radio"
+									name="insuranceFor"
+									value="myselfAndPartner"
+								/>
+
+								<img src="/img/myselfAndMypartner.svg" alt="" />
+								<p>Myself & my partner</p>
+							</label>
+							<label
+								><input type="radio" name="insuranceFor" value="myFamily" />
+
+								<img src="/img/myfamily.svg" alt="" />
+								<p>My family</p>
+							</label>
+						</div>
+					</div>
+
+					<!-- Section 2 Do you smoke -->
+					<div class="section" id="section2">
+						<h2>Do you smoke?</h2>
+						<h4>
+							We need to know this because people who smoke might be more likely
+							to claim.
+						</h4>
+						<div class="options flex">
+							<label>
+								<input type="radio" name="doyousmoke" value="no" required />
+								<img src="/img/no-smoke.svg" alt="" />
+								<p>No</p>
+							</label>
+							<label>
+								<input type="radio" name="doyousmoke" value="yes" />
+								<img src="/img/yes-smoke.svg" alt="" />
+								<p>Yes</p>
+							</label>
+						</div>
+					</div>
+
+					<!-- Section 3 Female or Male -->
+					<div class="section" id="section3">
+						<h2>Were you born male or female?</h2>
+						<h4>
+							We ask this as your gender at birth may affect the health
+							conditions you develop during your life.
+						</h4>
+						<div class="options flex">
+							<label>
+								<input type="radio" name="sex" value="female" required />
+								<img src="/img/female.svg" alt="" />
+								<p>Female</p>
+							</label>
+							<label>
+								<input type="radio" name="sex" value="male" />
+								<img src="/img/male.svg" alt="" />
+								<p>Male</p>
+							</label>
+						</div>
+					</div>
+
+					<!-- Section 4 DOB -->
+
+					<div class="section" id="section4">
+						<h2>And when were you born?</h2>
+						<h4>Please enter your date of birth.</h4>
+
+						<div class="date-input-container">
+							<input type="text" id="day" maxlength="2" placeholder="DD" />
+							<span>/</span>
+							<input type="text" id="month" maxlength="2" placeholder="MM" />
+							<span>/</span>
+							<input type="text" id="year" maxlength="4" placeholder="YYYY" />
+						</div>
+						<span id="date-error-message" class="error-message"></span>
+					</div>
+
+					<!-- Section 5 Post code -->
+
+					<div class="section" id="section5">
+						<h2>What's your home postcode?</h2>
+						<h4>
+							The price of health insurance varies depending on where you live.
+						</h4>
+
+						<div class="date-input-container">
+							<input
+								class="input"
+								type="text"
+								id="postcode"
+								name="postcode"
+								placeholder="e.g. SW1 ASQ"
+							/>
+						</div>
+						<span id="postcode-error-message" class="error-message"
+							>Please enter a valid postcode.</span
+						>
+					</div>
+
+					<!-- Section 6 Personal details -->
+
+					<div class="section" id="section6">
+						<h2>Please can you provide your contact details?</h2>
+						<h4>We will use them to contact you about your quote.</h4>
+
+						<div class="details">
+							<!-- Fullname container -->
+							<div class="date-input-container">
+								<input
+									class="input"
+									type="text"
+									id="fullname"
+									placeholder="Full name"
+									name="fullname"
+								/>
+							</div>
+							<span id="fullname-error-message" class="error-message"
+								>Please enter your full name.
+							</span>
+							<!-- email container -->
+							<div class="date-input-container">
+								<input
+									class="input"
+									type="email"
+									id="email"
+									placeholder="Email"
+									name="email"
+								/>
+							</div>
+							<span id="email-error-message" class="error-message"
+								>Please enter your email address.
+							</span>
+							<!-- phone number container -->
+							<div class="date-input-container">
+								<input
+									class="input"
+									type="tel"
+									id="phone"
+									placeholder="Phone number"
+									name="phone"
+								/>
+							</div>
+							<span id="phone-error-message" class="error-message"
+								>Please enter your phone number.
+							</span>
+						</div>
+					</div>
+					<button type="submit" id="submitBtn">Compare Quotes >></button>
+					<small
+						>By clicking 'Compare Quotes' you agree to the Privacy Policy and
+						Terms & Conditions, and understand you will be called by an FCA
+						authorised health insurance firm. In addition, you agree to
+						receiving an email from BestCompare, enabling you to give feedback
+						to us of our services.</small
+					>
+				</form>
+				<aside class="sideBar">
+					<article>
+						<figure>
+							<img src="./img/sideBarImg.jpeg" alt="" />
+							<figcaption>
+								<p>The Answer To Worrying NHS Waiting Lists</p>
+							</figcaption>
+						</figure>
+
+						<p class="bannertxt">
+							In the past two years, <strong> NHS waiting lists </strong> have
+							grown by over 2 million people
+							<a
+								href="https://www.protectionplans.co.uk/advertorial-health-3/#ref-link-2"
+								>(2)</a
+							>.In addition, there is a <strong>staff shortage</strong> of
+							110,000
+							<a
+								href="https://www.protectionplans.co.uk/advertorial-health-3/#ref-link-3"
+								>(3)</a
+							>
+							workers in the NHS.
+						</p>
+					</article>
+				</aside>
+			</main>
+
+			<!-- Extra information and footer below -->
+
+			<div class="links">
+				<div class="wrapper">
+					<a class="link" href="https://www.bbc.com/news/health-56752599"
+						>*bbc.com/news/health-56752599</a
+					>
+					<a
+						href="https://www.health.org.uk/publications/long-reads/nhs-performance-and-waiting-times"
+						>**health.org.uk/publications/long-reads/nhs-performance-and-waiting-times</a
+					>
+					<p>
+						∫ This is based off a non-smoking 25-year-old, with mid-level cover
+						paying a £200 excess living outside of London with £500 outpatient
+						cover
+					</p>
+				</div>
+			</div>
+			<footer class="footer">
+				<section class="mainFooter">
+					<div class="wrapper grid">
+						<div class="firstCol">
+							<img src="./img/bc-logo.svg-white.svg" alt="logoBestcompare" />
+
+							<div class="firstColInfo">
+								<a href="callto:01258 446 624">T: 01258 446 624</a>
+								<a href="mailto:hello@bestcompare">E: hello@bestcompare.com</a>
+							</div>
+
+							<div class="firstColText">
+								<p>
+									Please note: BestCompare are specialist lead generators who
+									will earn a fee by introducing you to an authorised FCA
+									regulated broker or insurer who can send you relevant quotes.
+									We are not an independent price comparison site, or an
+									insurance Brokerage. We do not offer financial advice.
+								</p>
+								<p>
+									BestCompare is a trading name of Amesmo Ltd. Amesmo Ltd is
+									registered in England and Wales, Company Registration No
+									11520871. Registered Office: 20-22 Wenlock Road London N1 7GU.
+									Head Office: The Waterfront, Salts Mill Road, Shipley, BD17
+									7TD.
+								</p>
+							</div>
+						</div>
+						<div class="secondCol col">
+							<p>Learn more</p>
+							<ul>
+								<li><a href="#">Life Insurance</a></li>
+								<li><a href="#">Health insurance</a></li>
+								<li><a href="#">Income Protection</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Contact</a></li>
+							</ul>
+						</div>
+						<div class="third col">
+							<p>Legal</p>
+							<ul>
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="secondFooter">
+					<div class="wrapper">
+						<div class="copyrights">
+							<p>
+								Amesmo Ltd is Authorised and Regulated by the Financial Conduct
+								Authority and is entered on the Financial Services Register
+								under number 820864. Registered with the Information
+								Commissioners Office (Registration number ZA455421).
+							</p>
+							<p>©2023 BestCompare. All Rights Reserved.</p>
+						</div>
+					</div>
+				</section>
+			</footer>
+		</div>
+		<script defer src="/js/script.js"></script>
+	</body>
+</html>
